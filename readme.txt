@@ -18,9 +18,10 @@ Pasos para ejecutar las pruebas:
 
 2. Crear una nueva colección llamada "Softka_API_Rest". o Importar el archivo (Softka_API_Rest.postman_collection.json)
    - El archivo (Softka_API_Rest.postman_collection.json) contiene un flujo automatizado de pruebas que se ejecutan
-     cada vez que el servicio es consumido o ejecutado.
+     cada vez que el servicio es consumido o ejecutado, para ver los test dirigete a la pestaña (Scripts - Post-response) y en la pestaña (Test Results) puedes ver
+     los resultados de los test ejecutados.
 
-3. Crear una nueva petición POST para Signup:
+3. Crear una nueva petición POST para un usuario nuevo:
    - URL: https://api.demoblaze.com/signup
    - Body (raw JSON):
      {
@@ -40,7 +41,7 @@ Pasos para ejecutar las pruebas:
 
    - Enviar la petición para crear un nuevo usuario.
 
-4. Crear otra petición POST para Signup con el mismo usuario para probar usuario duplicado:
+4. Crear otra petición POST para Signup con el mismo usuario para probar usuario duplicado o existente:
 
    - Repetir el paso anterior con el mismo username y password.
    - Enviar y observar la respuesta para validar manejo de usuario ya existente.
