@@ -10,7 +10,8 @@ Conclusiones del ejercicio de pruebas de API Demoblaze
 - Las respuestas del API son claras y consistentes con los estados esperados.
 - La herramienta Postman es útil para validar funcionalidad y comportamiento esperado de los servicios REST.
 
-Recomendación: 
+===============
+RECOMENDACIONES: 
 ===============
 
 1. Para el servicio: https://api.demoblaze.com/signup y https://api.demoblaze.com/login
