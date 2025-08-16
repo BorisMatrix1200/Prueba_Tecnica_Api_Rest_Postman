@@ -1,0 +1,79 @@
+======================================================
+Conclusiones del ejercicio de pruebas de API Demoblaze
+======================================================
+
+- El servicio de Signup permite crear usuarios nuevos con éxito cuando se envían datos válidos.
+- Cuando se intenta crear un usuario que ya existe, el servicio devuelve un mensaje de error claro indicando que el usuario ya existe.
+- El servicio de Login funciona correctamente al validar credenciales válidas y devuelve un mensaje o token de sesión exitoso.
+- El servicio de Login rechaza credenciales inválidas mostrando un mensaje de error.
+- Se recomienda usar usuarios únicos en pruebas para evitar interferencias.
+- Las respuestas del API son claras y consistentes con los estados esperados.
+- La herramienta Postman es útil para validar funcionalidad y comportamiento esperado de los servicios REST.
+
+Recomendación: 
+===============
+
+1. Para el servicio: https://api.demoblaze.com/signup y https://api.demoblaze.com/login
+   con el body: 
+
+   {
+    "username": "Boris Andres",
+    "password": "Password2025+"
+   }
+
+  =================================================
+  RECOMENDACIONES PARA UNA CORRECTA ESTANDARIZACION
+  =================================================
+
+  Para una correcta estandarización del response debería tener el siguiente formato: 
+
+  "error": {
+  "code": 123,
+  "message": "This user already exist.",
+  "fields": {
+    "username": "Username/password"
+    }
+  }
+
+  En ese mismo orden para cada caso: 
+
+  {
+  "success": true,
+  "message": "User created successfully.",
+  "data": {
+    "userId": 12345,
+    "username": "usuarioPrueba123"
+   }
+  }
+
+  {
+  "success": false,
+  "message": "Invalid username or password.",
+  "error": {
+    "code": 401,
+    "details": "Authentication failed"
+   }
+  }
+
+ ===============================
+ Basado en el siguiente esquema:
+ ===============================
+
+ Método HTTP correcto.
+ Endpoint            = legible, versionado y consistente.
+ Headers mínimos     = (Content-Type, Accept, Authorization).
+ Query Params válidos y con tipos correctos.
+ Path Params correctos y validados.
+ Body                = cumple esquema (tipos, obligatorios, formatos).
+ Autenticación presente si es necesaria.
+ Convención uniforme en nombres = (snake_case o camelCase). 
+ Correcto:   "firstName": "Boris"
+ Incorrecto: "First_Name": "Boris"
+ Respuestas claras en caso de error.
+
+ ====================
+ Revisión de contrato
+ ====================	
+ 
+ NOTA: Debe hacerse una revisión de contrato de API (OpenAPI o Swagger).
+
