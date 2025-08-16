@@ -59,7 +59,7 @@ Recomendación:
  Basado en el siguiente esquema:
  ===============================
 
- Método HTTP correcto.
+ Método HTTP correcto = GET, POST, PUT, PATCH o DELETE
  Endpoint            = legible, versionado y consistente.
  Headers mínimos     = (Content-Type, Accept, Authorization).
  Query Params válidos y con tipos correctos.
@@ -67,8 +67,8 @@ Recomendación:
  Body                = cumple esquema (tipos, obligatorios, formatos).
  Autenticación presente si es necesaria.
  Convención uniforme en nombres = (snake_case o camelCase). 
- Correcto:   "firstName": "Boris"
- Incorrecto: "First_Name": "Boris"
+  - Correcto:   "firstName": "Boris"
+  - Incorrecto: "First_Name": "Boris"
  Respuestas claras en caso de error.
 
  ====================
